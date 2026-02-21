@@ -38,8 +38,8 @@
       content="We design and develop custom laboratory instruments and research prototypes tailored for experimental and scientific requirements."
     />
     <meta property="og:url" content="https://alootype.in/" />
-    <!-- Optional image -->
-    <!-- <meta property="og:image" content="https://alootype.in/og-image.png" /> -->
+
+    <meta property="og:image" content="https://alootype.in/og-image.png" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -51,10 +51,13 @@
       name="twitter:description"
       content="Design and development of custom lab instruments and experimental prototypes for research-driven applications."
     />
-    <!-- <meta name="twitter:image" content="https://alootype.in/og-image.png" /> -->
+    <meta name="twitter:image" content="https://alootype.in/og-image.png" />
 
-    <!-- Favicon (add later) -->
-    <!-- <link rel="icon" href="/favicon.ico" /> -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
     <!-- Styles -->
     <link rel="stylesheet" href="style.css" />
@@ -64,23 +67,17 @@
       {
         "@context": "https://schema.org",
         "@type": "Organization",
+        "@id": "https://alootype.in/#organization",
         "name": "Alootype Engineering Systems",
         "url": "https://alootype.in",
+        "logo": "https://alootype.in/assets/logo.png",
         "description": "Design and development of custom laboratory instruments and experimental prototypes for research and scientific applications.",
         "sameAs": ["https://alootype.com"],
         "contactPoint": {
           "@type": "ContactPoint",
           "contactType": "technical enquiries",
           "email": "info@alootype.com"
-        }
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Alootype Engineering Systems",
-        "url": "https://alootype.in",
+        },
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": "Engineering Services",
@@ -121,8 +118,61 @@
         }
       }
     </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "@id": "https://alootype.in/products/multichannel-programmable-power-supply",
+        "name": "Digital Multichannel Programmable Power Supply",
+        "description": "A research-grade digital multichannel programmable power supply designed for laboratory and experimental use, enabling precise voltage and current control across multiple independent channels with monitoring and safety features.",
+        "brand": {
+          "@type": "Organization",
+          "@id": "https://alootype.in/#organization"
+        },
+        "manufacturer": {
+          "@type": "Organization",
+          "@id": "https://alootype.in/#organization"
+        },
+        "category": "Laboratory Power Supplies",
+        "applicationCategory": "Scientific Instrumentation",
+        "audience": {
+          "@type": "Audience",
+          "audienceType": "Research laboratories, academic institutions, hardware startups"
+        }
+      }
+    </script>
   </head>
   <body>
+    <nav class="nav">
+      <div class="nav-container">
+        <!-- Brand -->
+        <a href="/" class="nav-brand">
+          <img src="/assets/logo.png" alt="Alootype Engineering Systems logo" />
+        </a>
+
+        <!-- Mobile toggle -->
+        <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+
+        <!-- Menu -->
+        <ul class="nav-menu">
+          <li><a href="/">Home</a></li>
+
+          <!-- Products dropdown -->
+          <li class="nav-dropdown">
+            <button class="dropdown-toggle">Products ▾</button>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="/products/power-supply.html">
+                  Digital Multichannel Power Supply
+                </a>
+              </li>
+              <!-- future products go here -->
+            </ul>
+          </li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
     <header class="hero">
       <div class="container">
         <h1>Alootype Engineering Systems</h1>
@@ -384,6 +434,21 @@
           }
         ]
       }
+    </script>
+    <script>
+      const toggle = document.querySelector(".nav-toggle");
+      const menu = document.querySelector(".nav-menu");
+
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("open");
+      });
+
+      // Mobile dropdown toggle
+      document.querySelectorAll(".dropdown-toggle").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          btn.nextElementSibling.classList.toggle("open");
+        });
+      });
     </script>
   </body>
 </html>

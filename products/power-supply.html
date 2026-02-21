@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>
+      Digital Multichannel Programmable Power Supply | Alootype Engineering
+      Systems
+    </title>
+
+    <meta
+      name="description"
+      content="Research-grade digital multichannel programmable power supply with precise voltage and current control. Coming soon by Alootype Engineering Systems."
+    />
+
+    <!-- Shared main styles -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- Product specific styles -->
+    <link rel="stylesheet" href="/products/power-supply.css" />
+  </head>
+
+  <body>
+    <!-- NAV (reuse same nav as homepage) -->
+    <nav class="nav">
+      <div class="nav-container">
+        <!-- Brand -->
+        <a href="/" class="nav-brand">
+          <img src="/assets/logo.png" alt="Alootype Engineering Systems logo" />
+        </a>
+
+        <!-- Mobile toggle -->
+        <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+
+        <!-- Menu -->
+        <ul class="nav-menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="#services">Services</a></li>
+
+          <!-- Products dropdown -->
+          <li class="nav-dropdown">
+            <button class="dropdown-toggle">Products ▾</button>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="/products/power-supply.html">
+                  Digital Multichannel Power Supply
+                </a>
+              </li>
+              <!-- future products go here -->
+            </ul>
+          </li>
+
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="product-page">
+      <!-- HERO -->
+      <section class="product-hero">
+        <div class="product-container">
+          <div class="product-info">
+            <span class="badge">Coming Soon</span>
+            <p class="launch-note">Launching soon · Early access available</p>
+
+            <h1>Digital Multichannel Programmable Power Supply</h1>
+
+            <p class="subtitle">
+              A research-grade, digitally controlled multi-output power supply
+              designed for experimental laboratories and advanced prototyping.
+            </p>
+
+            <ul class="highlights">
+              <li>Independent programmable channels</li>
+              <li>Precision voltage & current control</li>
+              <li>Designed for research & automation</li>
+              <li>Safety monitoring & diagnostics</li>
+            </ul>
+          </div>
+
+          <!-- IMAGE SLIDER -->
+          <div class="slider">
+            <div class="slides">
+              <img
+                src="/products/images/psu view 1.png"
+                alt="Power supply front view"
+              />
+              <img
+                src="/products/images/psu info1.png"
+                alt="Power supply info"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- INTEREST CAPTURE -->
+      <section class="interest">
+        <div class="product-container">
+          <h2>Interested in this instrument?</h2>
+
+          <p>
+            We are collecting early interest to prioritize development,
+            specifications, and production planning.
+          </p>
+
+          <form class="interest-form">
+            <input type="email" placeholder="Your email address" required />
+            <button type="submit">Notify Me</button>
+          </form>
+
+          <p class="note">
+            No spam. You’ll only hear from us when the product is ready or when
+            we request technical feedback.
+          </p>
+        </div>
+      </section>
+
+      <!-- FOOTER NOTE -->
+      <section class="product-footer">
+        <p>
+          Developed by <strong>Alootype Engineering Systems</strong><br />
+          Engineered for research environments.
+        </p>
+      </section>
+    </main>
+
+    <!-- SLIDER SCRIPT -->
+    <script>
+      const slides = document.querySelector(".slides");
+      let index = 0;
+
+      setInterval(() => {
+        index = (index + 1) % slides.children.length;
+        slides.style.transform = `translateX(-${index * 100}%)`;
+      }, 4000);
+    </script>
+  </body>
+</html>
